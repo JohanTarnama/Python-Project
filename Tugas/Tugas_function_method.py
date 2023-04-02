@@ -5,6 +5,15 @@ class Kontak :
       self.name = input_name
       self.telephone = input_telephone
       self.date = date_add
+   def searching(input_nomor) :
+      os.system("cls")
+      for i in range(len(daftar_kontak)) :
+         if input_nomor == daftar_kontak[i].__dict__["telephone"] :
+            print("Data Kontak")
+            print("===========")
+            print(f"Nama                 : {daftar_kontak[i].__dict__['name']}")
+            print(f'Nomor                : {daftar_kontak[i].__dict__['telephone']}")
+            print(f"Tanggal ditambahkan  : {daftar_kontak[i].__dict__['date']}")
    
    def adding() :
       nama = input("Masukan nama  : ")
